@@ -1,59 +1,73 @@
-    /* This is a comment in CSS */
-    /* You can use CSS selectors to target specific elements */
-    /* For example, this rule will apply to all input elements */
-    input {
-      /* You can use properties and values to change the appearance of elements */
-      /* For example, this property will change the width of the input elements */
-      width: 80%;
-      /* You can also use units such as px (pixels), em (relative to font size), or % (percentage) */
-      /* For example, this property will add some space inside the input elements */
-      padding: 10px;
-      /* You can use colors in different formats such as names, hex codes, or rgb values */
-      /* For example, this property will change the background color of the input elements */
-      background-color: #f0f0f0;
-      /* You can use border properties to change the border size, style, and color of the elements */
-      /* For example, this property will add a solid black border of 1 pixel around the input elements */
-      border: 1px solid black;
-      /* You can use border-radius property to add rounded corners to the elements */
-      /* For example, this property will make the corners of the input elements 5 pixels rounded */
-      border-radius: 5px;
-    }
+/* style.css */
 
-    /* You can also use pseudo-classes to target elements based on their state */
-    /* For example, this rule will apply to input elements when they are focused (clicked on) */
-    input:focus {
-      /* You can use outline property to remove or change the default outline around the focused elements */
-      outline: none;
-      /* You can also change other properties to create some visual effects */
-      /* For example, this property will change the background color of the focused input elements to light blue */
-      background-color: lightblue;
-    }
-
-    /* You can also use classes and ids to target specific elements */
-    /* For example, this rule will apply to the element with the id of submit-button */
-    #submit-button {
-      /* You can use font properties to change the font family, size, weight, and style of the text */
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-      font-style: italic;
-      /* You can also use text properties to change the text color, alignment, decoration, and transformation */
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-      /* You can also use background properties to change the background image, position, size, and repeat of the elements */
-      background-image: url('https://i.imgur.com/4Y8bqsc.png');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    /* You can also use media queries to create responsive designs that adapt to different screen sizes and devices */
-    @media (max-width: 600px) {
-      /* This rule will apply when the screen width is less than or equal to 600 pixels */
-      input {
-        /* For example, this property will change the width of the input elements to 100% when the screen is small */
-        width: 100%;
-      }
-    }
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Header styles */
+  h1 {
+    color: #333;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Form container styles */
+  form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Input and label styles */
+  label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Button styles */
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /* Button hover effect */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: #d9534f;
+    margin: 5px 0;
+  }
+  
+  /* Success message styles */
+  .success-message {
+    color: #5bc0de;
+    margin: 5px 0;
+  }  
