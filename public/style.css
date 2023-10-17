@@ -1,0 +1,50 @@
+/* This is the style file that defines the appearance of the web app */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+}
+
+.alert {
+  padding: 10px;
+}
+
+.alert-danger {
+  background-color: #f44336;
+}
+
+.alert ul {
+  list-style-type: none;
+}
