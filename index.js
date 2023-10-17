@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const validator = require('express-validator');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(validator());
 
-app.use(express.static(path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const routes = require('./routes');
 app.use('/', routes);
