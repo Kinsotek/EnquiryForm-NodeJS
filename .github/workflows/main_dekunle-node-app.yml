@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'dekunle-node-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FBC840D24FBA4A63B60BF9D5769B6DB6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A025C1AFDBE74E539929C3D8D875A37D }}
           package: .
