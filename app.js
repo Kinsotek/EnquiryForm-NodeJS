@@ -29,7 +29,7 @@ app.post("/", validator.form, function (req, res) {
   }
 });
 
-// Start the server on port 3000
-app.listen(3000, function () {
-  console.log("Server running on port 3000");
+// Start the server
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 });
