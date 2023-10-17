@@ -1,32 +1,36 @@
+// index.js
 const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const validator = require('express-validator');
-
 const app = express();
-const port = process.env.PORT || 3000;
-
-app.set('view engine', 'ejs');
+const bodyParser = require('body-parser');
+const { body, validationResult } = require('express-validator');
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(validator());
+app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-const routes = require('./routes');
-app.use('/', routes);
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/form.html');
 });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
+app.post(
+  '/submit',
+  body('name').notEmpty().trim().escape(),
+  body('email').isEmail().normalizeEmail(),
+  body('phone').isMobilePhone().trim(),
+  body('message').notEmpty().trim().escape(),
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
-// Handle unhandled promise rejections
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    res.status(200).json({
+      success: true,
+      message: 'Form submitted successfully',
+      data: req.body,
+    });
+  }
+);
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server is running');
 });
