@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+</head>
+<body>
+  <h1>Form</h1>
+  <!-- Display a list of errors if any -->
+  <% if (errors) { %>
+    <ul>
+      <% for (let error of errors) { %>
+        <li><%= error.msg %></li>
+      <% } %>
+    </ul>
+  <% } %>
+  <!-- Define the form action and method -->
+  <form action="/" method="POST">
+    <!-- Define the input fields with labels and values -->
+    <label for="fullName">Full Name: </label>
+    <input id="fullName" type="text" name="fullName" value="<%= data.fullName || '' %>" /><br />
+    <label for="email">Email Address: </label>
+    <input id="email" type="email" name="email" value="<%= data.email || '' %>" /><br />
+    <label for="phone">Telephone Number: </label>
+    <input id="phone" type="tel" name="phone" value="<%= data.phone || '' %>" /><br />
+    <label for="message">Enquiry Message: </label>
+    <textarea id="message" name="message"><%= data.message || '' %></textarea><br />
+    <!-- Define the submit button -->
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>
