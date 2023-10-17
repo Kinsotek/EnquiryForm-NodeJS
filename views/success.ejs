@@ -1,0 +1,22 @@
+<!-- This is the view file that displays a success message -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Node.js Web App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Node.js Web App</h1>
+    <p>Thank you for submitting the form.</p>
+    <!-- Display the submitted data -->
+    <ul>
+      <li>Full Name: <%= data.fullname %></li>
+      <li>Email Address: <%= data.email %></li>
+      <li>Telephone Number: <%= data.phone %></li>
+      <li>Enquiry Message: <%= data.message %></li>
+    </ul>
+  </div>
+</body>
+</html>
