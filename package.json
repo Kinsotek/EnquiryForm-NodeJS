@@ -1,0 +1,26 @@
+{
+    "name": "enquiry-form-webapp",
+    "description": "A simple enquiry form in Node.js",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "author": "Adekunle",
+    "scripts": {
+        "start": "node index.js",
+        "lint": "eslint",
+        "format": "prettier --single-quote --write *.js"    
+    },
+    "devDependencies": {
+        "eslint": "^7.5.0",
+        "prettier": "^2.0.5"
+      },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-validator": "^6.12.1"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+}
